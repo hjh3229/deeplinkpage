@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deeplink Test</title>
+  <style>
+    body {
+      font-family: Arial, "Malgun Gothic", sans-serif;
+      margin: 24px;
+      color: #222;
+      background: #fff;
+    }
+    h1 {
+      margin: 28px 0 12px;
+      font-size: 22px;
+    }
+    h1:first-of-type { margin-top: 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      margin-bottom: 32px;
+    }
+    th, td {
+      border: 1px solid #d0d7de;
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+      overflow-wrap: anywhere;
+    }
+    th {
+      background: #f3f5f7;
+      font-weight: 700;
+    }
+    th:first-child, td:first-child { width: 34%; }
+    a {
+      color: #0969da;
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    code {
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+      white-space: normal;
+    }
+  </style>
+</head>
+<body>
+  <h1>PRD Deeplink</h1>
+  <table>
+    <thead><tr><th>구분</th><th>딥링크 형식</th></tr></thead>
+    <tbody>
+      <tr><td><a href="nmap://map?&amp;appname=com.samsung.android.messaging">test</a></td><td><code>nmap://map?&amp;appname=com.samsung.android.messaging</code></td></tr>
+      <tr><td><a href="rcsbot:026100085@botplatform.maapservice.com">신규대화방생성 A2P - 026100085</a></td><td><code>rcsbot:026100085@botplatform.maapservice.com</code></td></tr>
+      <tr><td><a href="rcsbot:0261000858@botplatform.maapservice.com">신규대화방생성 양방향 - 0261000858</a></td><td><code>rcsbot:0261000858@botplatform.maapservice.com</code></td></tr>
+      <tr><td><a href="rcsbot:bizsmallorder@botplatform.maapservice.com">신규대화방생성 ID 양방향 - 스몰오더</a></td><td><code>rcsbot:bizsmallorder@botplatform.maapservice.com</code></td></tr>
+      <tr><td><a href="rcsbot:026100085@botplatform.maapservice.com">1번으로 이동되나 확인 - 026100085</a></td><td><code>rcsbot:026100085@botplatform.maapservice.com</code></td></tr>
+      <tr><td><a href="rcsbot:0261000858@botplatform.maapservice.com">2번으로 이동되나 확인 - 0261000858</a></td><td><code>rcsbot:0261000858@botplatform.maapservice.com</code></td></tr>
+      <tr><td><a href="rcsbot:bizsmallorder@botplatform.maapservice.com">3번으로 이동되나 확인 - 스몰오더</a></td><td><code>rcsbot:bizsmallorder@botplatform.maapservice.com</code></td></tr>
+      <tr><td><a href="rcsbot:15225739.skt@botplatform.maapservice.com">중계사 테스트용2 - 대화방 이동?</a></td><td><code>rcsbot:15225739.skt@botplatform.maapservice.com</code></td></tr>
+      <tr><td><a href="rcsbot:15225739.skt@botplatform.maapservice.com?action=brandhome">중계사 테스트용2 - 15225739</a></td><td><code>rcsbot:15225739.skt@botplatform.maapservice.com?action=brandhome</code></td></tr>
+      <tr><td><a href="rcsbot:0261000859@botplatform.maapservice.com?action=brandhome">신규 브랜드홈 이동 - 0261000859</a></td><td><code>rcsbot:0261000859@botplatform.maapservice.com?action=brandhome</code></td></tr>
+      <tr><td><a href="rcsbot:0261000858@botplatform.maapservice.com?action=brandhome">기존 브랜드홈 이동 - 0261000858</a></td><td><code>rcsbot:0261000858@botplatform.maapservice.com?action=brandhome</code></td></tr>
+      <tr><td><a href="rcsbot:0261000858@botplatform.maapservice.com?body=안녕하세요~검증챗봇확인중입니다.">문구 나오나 확인</a></td><td><code>rcsbot:0261000858@botplatform.maapservice.com?body=안녕하세요~검증챗봇확인중입니다.</code></td></tr>
+      <tr><td><a href="rcsbot:01022223333@botplatform.maapservice.com">없는 번호로 딥링크 시 알 수 없는 대화방 노출</a></td><td><code>rcsbot:01022223333@botplatform.maapservice.com</code></td></tr>
+      <tr><td><a href="sms:01022223333">SMS로 이동 시 동작 확인</a></td><td><code>sms:01022223333</code></td></tr>
+      <tr><td><a href="rcsbot:0261000858@botplatform.maapservice.com?suggestions=InN1Z2dlc3Rpb25zIjogW3sNCiAgICAicmVwbHkiOiB7DQogICAgICAgICAgICAgICAgICAgICJkaXNwbGF5VGV4dCI6ICJTZW5kIG1lc3NhZ2UiLA0KICAgICAgICAgICAgICAgICAgICAicG9zdGJhY2siOiB7DQogICAgICAgICAgICAgICAgICAgICAgICAiZGF0YSI6ICJwb3N0YmFja0lkPXBpZF9za3RfaW50ZXJuYWxfdGVzdF81O2F1dG9SZXBseU1zZ0lkPXNrdF90ZXN0X2F1dG9yZXBseTAxIg0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgfQ0KICB9DQpd">suggestion2</a></td><td><code>rcsbot:0261000858@botplatform.maapservice.com?suggestions=InN1Z2dlc3Rpb25zIjogW3sNCiAgICAicmVwbHkiOiB7DQogICAgICAgICAgICAgICAgICAgICJkaXNwbGF5VGV4dCI6ICJTZW5kIG1lc3NhZ2UiLA0KICAgICAgICAgICAgICAgICAgICAicG9zdGJhY2siOiB7DQogICAgICAgICAgICAgICAgICAgICAgICAiZGF0YSI6ICJwb3N0YmFja0lkPXBpZF9za3RfaW50ZXJuYWxfdGVzdF81O2F1dG9SZXBseU1zZ0lkPXNrdF90ZXN0X2F1dG9yZXBseTAxIg0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgfQ0KICB9DQpd</code></td></tr>
+    </tbody>
+  </table>
+
+  <h1>STG Deeplink</h1>
+  <table>
+    <thead><tr><th>구분</th><th>딥링크 형식</th></tr></thead>
+    <tbody>
+      <tr><td><a href="rcsbot:0261000800@botplatform.stg.maapservice.com">신규대화방생성 A2P - 0261000800</a></td><td><code>rcsbot:0261000800@botplatform.stg.maapservice.com</code></td></tr>
+      <tr><td><a href="rcsbot:0261000803@botplatform.stg.maapservice.com">신규대화방생성 양방향 - 0261000803</a></td><td><code>rcsbot:0261000803@botplatform.stg.maapservice.com</code></td></tr>
+      <tr><td><a href="rcsbot:skt_test_bot414@botplatform.stg.maapservice.com">신규대화방생성 ID 양방향 - skt_test_bot414</a></td><td><code>rcsbot:skt_test_bot414@botplatform.stg.maapservice.com</code></td></tr>
+      <tr><td><a href="rcsbot:0261000800@botplatform.stg.maapservice.com">1번으로 이동되나 확인 - 0261000800</a></td><td><code>rcsbot:0261000800@botplatform.stg.maapservice.com</code></td></tr>
+      <tr><td><a href="rcsbot:0261000803@botplatform.stg.maapservice.com">2번으로 이동되나 확인 - 0261000803</a></td><td><code>rcsbot:0261000803@botplatform.stg.maapservice.com</code></td></tr>
+      <tr><td><a href="rcsbot:skt_test_bot414@botplatform.stg.maapservice.com">3번으로 이동되나 확인 - skt_test_bot414</a></td><td><code>rcsbot:skt_test_bot414@botplatform.stg.maapservice.com</code></td></tr>
+      <tr><td><a href="rcsbot:0261000805@botplatform.stg.maapservice.com?action=brandhome">신규 브랜드홈 이동 - 0261000805</a></td><td><code>rcsbot:0261000805@botplatform.stg.maapservice.com?action=brandhome</code></td></tr>
+      <tr><td><a href="rcsbot:0261000800@botplatform.stg.maapservice.com?action=brandhome">기존 브랜드홈 이동 - 0261000800</a></td><td><code>rcsbot:0261000800@botplatform.stg.maapservice.com?action=brandhome</code></td></tr>
+      <tr><td><a href="rcsbot:0261000800@botplatform.stg.maapservice.com?body=안녕하세요~검증챗봇확인중입니다.">문구 나오나 확인</a></td><td><code>rcsbot:0261000800@botplatform.stg.maapservice.com?body=안녕하세요~검증챗봇확인중입니다.</code></td></tr>
+      <tr><td><a href="rcsbot:skt_test_bot414@botplatform.stg.maapservice.com?suggestions=ew0KInN1Z2dlc3Rpb25zIjogWw0KICB7DQogICAgInJlcGx5Ijogew0KICAgICAgImRpc3BsYXlUZXh0IjogIk9wZW4gYSBjaGVja2luZyBhY2NvdW50IiwNCiAgICAgICJwb3N0YmFjayI6IHsNCiAgICAgICAgInJlcGx5IjogImFjdGlvbj1vcGVuLWNoZWNraW5nLWFjY291bnQ7c291cmNlPXd3dy53ZWJzaXRlLmNvbTtjYW1wYWlnbj1jaGstYWN0LWNtcGduLTE0Ig0KICAgICAgfQ0KICAgIH0NCiAgfQ0KXQ0KfQ==">suggestion</a></td><td><code>rcsbot:skt_test_bot414@botplatform.stg.maapservice.com?suggestions=ew0KInN1Z2dlc3Rpb25zIjogWw0KICB7DQogICAgInJlcGx5Ijogew0KICAgICAgImRpc3BsYXlUZXh0IjogIk9wZW4gYSBjaGVja2luZyBhY2NvdW50IiwNCiAgICAgICJwb3N0YmFjayI6IHsNCiAgICAgICAgInJlcGx5IjogImFjdGlvbj1vcGVuLWNoZWNraW5nLWFjY291bnQ7c291cmNlPXd3dy53ZWJzaXRlLmNvbTtjYW1wYWlnbj1jaGstYWN0LWNtcGduLTE0Ig0KICAgICAgfQ0KICAgIH0NCiAgfQ0KXQ0KfQ==</code></td></tr>
+    </tbody>
+  </table>
+</body>
+</html>
